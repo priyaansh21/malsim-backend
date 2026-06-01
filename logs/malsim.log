@@ -1,0 +1,22 @@
+2026-04-19T14:50:43 | INFO     | malsim.main | ══════════════════════════════════════════
+2026-04-19T14:50:44 | INFO     | malsim.main |   MalSim API v1.0.0  |  STARTUP
+2026-04-19T14:50:44 | INFO     | malsim.main | ══════════════════════════════════════════
+2026-04-19T14:50:44 | INFO     | app.database | Database initialised at C:\PROJECTS (DO NOT DELETE)\malsim-backend\malsim.db
+2026-04-19T14:50:44 | INFO     | malsim.main | Ready — listening on http://0.0.0.0:8000
+2026-04-19T14:51:42 | INFO     | app.routes.upload | Received upload: 'Lab6_VLAN.pptx.pdf' (932164 bytes)
+2026-04-19T14:51:42 | INFO     | app.utils.file_handler | Saved upload: Lab6_VLAN.pptx.pdf (932164 bytes) → C:\PROJECTS (DO NOT DELETE)\malsim-backend\uploads\3fe3ad29-ab98-4701-8540-3bfa61df18f9.pdf
+2026-04-19T14:51:42 | INFO     | app.routes.upload | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] DB record created — status=QUEUED
+2026-04-19T14:51:42 | INFO     | app.routes.upload | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Background analysis pipeline enqueued
+2026-04-19T14:51:42 | INFO     | malsim.main | POST /api/v1/upload → 202  (107.9 ms)
+2026-04-19T14:51:42 | INFO     | app.services.analysis_pipeline | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Pipeline started for 'Lab6_VLAN.pptx.pdf'
+2026-04-19T14:51:42 | INFO     | app.services.analysis_pipeline | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Status → PROCESSING
+2026-04-19T14:51:42 | INFO     | app.services.analysis_pipeline | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Phase 1: Static analysis
+2026-04-19T14:51:42 | INFO     | app.services.static_analysis | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Starting static analysis for 'Lab6_VLAN.pptx.pdf'
+2026-04-19T14:51:44 | INFO     | app.services.static_analysis | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Static analysis complete: entropy=7.59, sigs=0, score=15
+2026-04-19T14:51:44 | INFO     | app.services.analysis_pipeline | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Phase 2: Dynamic analysis
+2026-04-19T14:51:44 | INFO     | app.services.dynamic_analysis | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Starting dynamic analysis for 'Lab6_VLAN.pptx.pdf'
+2026-04-19T14:51:46 | INFO     | app.services.dynamic_analysis | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Dynamic analysis complete: events=2, fs_changes=0
+2026-04-19T14:51:46 | INFO     | app.services.analysis_pipeline | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Phase 3: Threat scoring
+2026-04-19T14:51:46 | INFO     | app.services.threat_scoring | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Starting threat scoring for 'Lab6_VLAN.pptx.pdf'
+2026-04-19T14:51:47 | INFO     | app.services.threat_scoring | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Threat scoring complete: composite=18.8, risk=LOW
+2026-04-19T14:51:47 | INFO     | app.services.analysis_pipeline | [3fe3ad29-ab98-4701-8540-3bfa61df18f9] Pipeline COMPLETED — score=18.8, risk=LOW
